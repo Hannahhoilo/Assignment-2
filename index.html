@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Drugstore Online</title>
+		<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">  
+		<link rel="stylesheet" href="css/fonts.css">
+	</head>
+
+	<body>
+
+		<div class="main-container">
+			<!-- FORM SECTION -->
+			<form class="medicine-form">
+				<h2>Register medicines</h2>
+
+				<label for="product-name">Product name:</label>
+				<input type="text" name="product-name" class="product-name" required>
+
+				<label for="product-id">Product ID:</label>
+				<input type="text" name="productID" class="productID" required>
+
+				<label for="manufacturer">Manufacturer:</label>
+				<input type="text" name="manufacturer" class="manufacturer" required>
+
+				<label for="expiration-date">Expiration Date:</label>
+				<input type="date" name="expiration-date" class="expiration-date" required>
+
+				<label for="quantity">Quantity:</label>
+				<input type="number" name="quantity" class="quantity" required>
+
+				<label for="format"></label>
+				<select name="format" class="format" required>
+					<option value="pain-relief">Pain Relief</option>
+					<option value="first-aid">First Aid Supplies</option>
+					<option value="supplements">Vitamins and Supplements</option>
+					<option value="dental-health">Dental Health</option>
+					<option value="allergy-medicine">Allergy Medicine</option>
+					<option value="child-products">Child Product</option>
+				</select>
+
+				<button type="submit" class="submit-button">Register Product</button>
+			</form>
+
+		<!--
+Product name (for example: Paracetamol, etc.)
+• Product ID (must be a unique ID)
+• Manufacturer
+• Expiration date
+• Quantity (How many packages are available?
+
+		-->
+
+			<!-- DISPLAY BOOKS SECTION -->
+			<section class="medicine-list-container">
+
+				<div class="select-list-button-container">
+					<button class="render-pain-medicine-button">Display pain relief</button>
+					<button class="render-first-aid-medicine-button">Display first aid supplies</button>
+					<button class="render-supplements-medicine-button">Display vitamins and supplements</button>
+					<button class="render-dental-medicine-button">Display dental health products</button>
+					<button class="render-allergy-medicine-button">Display allergy medicine</button>
+					<button class="render-child-medicine-button">Child products</button>
+				</div>
+
+				<div class="display-medicine-container">
+					<div class="display-pain-medicine">
+						<header class="pain-medicine-header">
+							<span>Product Name</span>
+							<span>Product ID</span>
+							<span>Manufacturer</span>
+							<span>Expiration Date</span>
+							<span>Quantity</span>
+							<span></span>
+						</header>
+						<ul class="pain-medicine-list">
+
+						</ul>
+					</div>
+
+					<div class="display-first-aid-medicine">
+						<header class="first-aid-medicine-header">
+							<span>Product Name</span>
+							<span>Product ID</span>
+							<span>Manufacturer</span>
+							<span>Expiration Date</span>
+							<span>Quantity</span>
+							<span></span>
+						</header>
+						<ul class="first-aid-medicine-list">
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</section>
+
+		</div>
+
+			<script src="js/script.js"></script>
+	</body>
+
+</html>
+
