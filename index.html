@@ -33,40 +33,31 @@
 
 				<label for="format"></label>
 				<select name="format" class="format" required>
-					<option value="pain-relief">Pain Relief</option>
-					<option value="first-aid">First Aid Supplies</option>
-					<option value="supplements">Vitamins and Supplements</option>
-					<option value="dental-health">Dental Health</option>
-					<option value="allergy-medicine">Allergy Medicine</option>
-					<option value="child-products">Child Products</option>
+					<option value="pain-medicine">Pain Medicine</option>
+					<option value="first-aid-medicine">First Aid Supplies</option>
+					<option value="dental-health-medicine">Dental Health</option>
 				</select>
 
 				<button type="submit" class="submit-button">Register Product</button>
 			</form>
 
 		<!--
-Product name (for example: Paracetamol, etc.)
-• Product ID (must be a unique ID)
-• Manufacturer
-• Expiration date
-• Quantity (How many packages are available?
+
 
 		-->
 
-			<!-- DISPLAY BOOKS SECTION -->
-			<section class="medicine-list-container">
+			<!-- DISPLAY MEDICINE SECTION -->
+			<section class="medicines-list">
 
 				<div class="select-list-button-container">
-					<button class="render-pain-medicine-button">Display pain relief</button>
+					<button class="render-pain-medicine-button">Display pain medicine</button>
 					<button class="render-first-aid-medicine-button">Display first aid supplies</button>
-					<button class="render-supplements-medicine-button">Display vitamins and supplements</button>
-					<button class="render-dental-medicine-button">Display dental health products</button>
-					<button class="render-allergy-medicine-button">Display allergy medicine</button>
-					<button class="render-child-medicine-button">Child products</button>
+					<button class="render-dental-health-medicine-button">Display dental health products</button>
 				</div>
 
 				<div class="display-medicine-container">
-					<div class="display-pain-medicine">
+					<div class="render-pain-medicines">
+					<div class="display-pain-medicines-container">
 						<header class="pain-medicine-header">
 							<span>Product Name</span>
 							<span>Product ID</span>
@@ -75,12 +66,13 @@ Product name (for example: Paracetamol, etc.)
 							<span>Quantity</span>
 							<span></span>
 						</header>
-						<ul class="pain-medicine-list">
+						<ul class="pain-medicines-list">
 
 						</ul>
 					</div>
+				</div>
 
-					<div class="display-first-aid-medicine">
+					<div class="display-first-aid-medicines">
 						<header class="first-aid-medicine-header">
 							<span>Product Name</span>
 							<span>Product ID</span>
@@ -89,7 +81,22 @@ Product name (for example: Paracetamol, etc.)
 							<span>Quantity</span>
 							<span></span>
 						</header>
-						<ul class="first-aid-medicine-list">
+						<ul class="first-aid-medicines-list">
+
+						</ul>
+
+					</div>
+
+					<div class="display-dental-health-medicines">
+						<header class="dental-health-medicine-header">
+							<span>Product Name</span>
+							<span>Product ID</span>
+							<span>Manufacturer</span>
+							<span>Expiration Date</span>
+							<span>Quantity</span>
+							<span></span>
+						</header>
+						<ul class="dental-health-medicines-list">
 
 						</ul>
 
