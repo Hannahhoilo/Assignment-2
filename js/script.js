@@ -37,6 +37,8 @@ const displayDentalHealthMedicineContainer = document.querySelector('.display-de
 const displayAllergyMedicineContaoner = document.querySelector('.display-allergy-medicine');
 const displayChildMedicineContainer = document.querySelector('.display-child-medicine');
 
+/* const displayPainMedicineUl = document.querySelector('.pain-medicine-list');  */
+
 // RENDER BUTTON
 const renderPainMedicineButton = document.querySelector('.render-pain-medicine-button');
 const renderFirstAidMedicineButton = document.querySelector('.render-first-aid-medicine-button');
@@ -51,6 +53,38 @@ const renderChildMedicineButton = document.querySelector('.render-child-medicine
 
 
 // ADDING THE EVENT LISTENERS
+
+
+// e = event
+medicineForm.addEventListener('submit', (e) =>{
+	e.preventDefault();
+	let newMedicine;
+
+	if (selectElement.value === 'pain-relief') {
+		newMedicine = new Medicine(productName.value, productID.value, selectElement.value, manufacturer.value, expirationDate.value, quantity.value);
+	} else {
+		newMedicine = new PainMedicine(productName.value, productID.value, selectElement.value, manufacturer.value, expirationDate.value, quantity.value);
+	}
+
+	Medicine.addMedicine(newMedicine);
+	console.log(newMedicine);
+	//console.log(medicine);
+	console.log(painMedicine);
+});
+
+renderPainMedicineButton.addEventListener('click', () => {
+	UI.activeTab = 'pain-relief';
+	UI.renderPainMedicine(painMedicine);
+});
+
+renderFirstAidMedicineButton.addEventListener('click', () => {
+	UI.activeTab = 'first-aid';
+	UI.renderFirstAidMedicine(firstAidMedicine);
+});
+
+
+
+
 /*
 selectElement.addEventListener('change', () => {
 	if(selectElement.value === 'physical') {
@@ -61,9 +95,10 @@ selectElement.addEventListener('change', () => {
 		narrator.removeAttribute('disabled');
 	}
 });
-*/
+
 
 // e = event
+/*
 medicineForm.addEventListener('submit', (e) =>{
 	e.preventDefault();
 	let newMedicine;
@@ -87,6 +122,7 @@ renderFirstAidMedicineButton.addEventListener('click', () => {
 	UI.activeTab = 'first-aid';
 	UI.renderFirstAidMedicine(firstAidMedicine);
 })
+*/
 
 /* ------------------------------------ */
 /* ------------------------------------ */
@@ -133,7 +169,7 @@ class Medicine {
 // super = de man vil den skal arve
 
 class PainMedicine extends Medicine {
-	constructor(productName, productID, manufacturer, expirationDate, quantity) {
+	constructor(productName, productID, manufacturer, expirationDate, quantity, painMedicine) {
 		super(productName, productID, manufacturer, expirationDate, quantity);
 		this.painMedicine = painMedicine;
 		this.ID = Date.now();
@@ -147,7 +183,7 @@ class PainMedicine extends Medicine {
 class UI {
 	static activeTab = 'pain-medicine';
 	static renderPainMedicine(medicine){
-		displayPainMedicineContainer.style.display = 'none';
+		//displayPainMedicineContainer.style.display = 'none';
 		displayPainMedicineContainer.style.display = 'block';
 		painMedicineUl.textContent = '';
 
