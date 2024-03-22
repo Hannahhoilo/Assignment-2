@@ -145,55 +145,6 @@ class DentalHealthMedicine extends Medicine {
 class UI {
   static activeTab = 'medicine';
 
-//   static renderMedicines(medicines) {
-//     displayPainMedicinesContainer.style.display = 'none';
-//     displayFirstAidMedicinesContainer.style.display = 'none';
-//     displayDentalHealthMedicinesContainer.style.display = 'none';
-//     displayMedicinesContainer.style.display = 'block';
-//     //medicinesUl.textContent = '';
-//     if (UI.activeTab === 'pain-medicine') {
-//       painMedicinesUl.textContent = '';
-//     }
-	
-    
-    
-
-//     if (UI.activeTab === 'medicine') { 
-//       medicines.forEach((medicine) => {
-//         console.log(medicine.productName);
-//         const liRow = document.createElement('li');
-//         const renderedProductName = document.createElement('span');
-//         const renderedProductID = document.createElement('span');
-//         const renderedManufacturer = document.createElement('span');
-//         const renderedExpirationDate = document.createElement('span');
-//         const renderedQuantity = document.createElement('span');
-//         const deleteButtonContainer = document.createElement('span');
-//         const deleteButton = document.createElement('button');
-
-//         renderedProductName.textContent = medicine.productName;
-//         renderedProductID.textContent = medicine.productID;
-//         renderedManufacturer.textContent = medicine.manufacturer;
-//         renderedExpirationDate.textContent = medicine.expirationDate;
-//         renderedQuantity.textContent = medicine.quantity;
-//         deleteButton.textContent = 'Delete';
-
-//         liRow.classList.add('medicines-row');
-//         deleteButton.classList.add('delete-button');
-
-//         liRow.dataset.id = medicine.ID;
-
-//         medicinesUl.append(liRow);
-//         liRow.append(renderedProductName, renderedProductID, renderedManufacturer, renderedExpirationDate, renderedQuantity, deleteButtonContainer);
-//         deleteButtonContainer.append(deleteButton);
-
-//         deleteButton.addEventListener('click', (e) => {
-//           const rowID = e.currentTarget.parentElement.parentElement.dataset.id;
-//           Medicine.deleteMedicine(rowID, medicines);
-//         });
-//       });
-//     }
-//   }
-
   static renderPainMedicines(painMedicines) {
     displayMedicinesContainer.style.display = 'block';
     displayFirstAidMedicinesContainer.style.display = 'none';
@@ -227,6 +178,7 @@ class UI {
 		//'pain-medicines-row'
         liRow.classList.add('pain-medicines-row');
         deleteButton.classList.add('delete-button');
+        deleteButtonContainer.classList.add('delete-button-container');
 
         painMedicinesUl.append(liRow);
         liRow.append(renderedProductName, renderedProductID, renderedManufacturer, renderedExpirationDate, renderedQuantity, deleteButtonContainer);
@@ -270,6 +222,7 @@ class UI {
 
         liRow.classList.add('first-aid-medicines-row');
         deleteButton.classList.add('delete-button');
+        deleteButtonContainer.classList.add('delete-button-container');
 
         firstAidMedicinesUl.append(liRow);
         liRow.append(renderedProductName, renderedProductID, renderedManufacturer, renderedExpirationDate, renderedQuantity, deleteButtonContainer);
@@ -312,6 +265,7 @@ class UI {
 
         liRow.classList.add('dental-health-medicines-row');
         deleteButton.classList.add('delete-button');
+        deleteButtonContainer.classList.add('delete-button-container');
 
         dentalHealthMedicinesUl.append(liRow);
         liRow.append(renderedProductName, renderedProductID, renderedManufacturer, renderedExpirationDate, renderedQuantity, deleteButtonContainer);
