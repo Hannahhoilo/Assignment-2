@@ -279,3 +279,63 @@ class UI {
     }
   }
 }
+
+/* Local storage */
+
+// Function to save medicines data to local storage
+function saveMedicinesToLocalStorage() {
+  // Convert the medicines arrays to a JSON string
+  const medicinesJson = JSON.stringify({
+    medicines: medicines,
+    painMedicines: painMedicines,
+    firstAidMedicines: firstAidMedicines,
+    dentalHealthMedicines: dentalHealthMedicines
+  });
+
+  // Save the JSON string to local storage
+  localStorage.setItem('medicinesData', medicinesJson);
+}
+
+// Function to load medicines data from local storage
+function loadMedicinesFromLocalStorage() {
+  // Retrieve the JSON string from local storage
+  const savedMedicinesJson = localStorage.getItem('medicinesData');
+
+  // Parse the JSON string back to its original format
+  if (savedMedicinesJson) {
+    const savedData = JSON.parse(savedMedicinesJson);
+
+    // Update your medicines arrays with the retrieved data
+    medicines.splice(0, medicines.length, ...savedData.medicines);
+    painMedicines.splice(0, painMedicines.length, ...savedData.painMedicines);
+    firstAidMedicines.splice(0, firstAidMedicines.length, ...savedData.firstAidMedicines);
+    dentalHealthMedicines.splice(0, dentalHealthMedicines.length, ...savedData.dentalHealthMedicines);
+  }
+}
+
+// Call the function to load medicines data from local storage when the page loads
+window.addEventListener('load', loadMedicinesFromLocalStorage);
+
+// Call the function to save medicines data to local storage whenever the medicines are updated
+medicineForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let newMedicine;
+
+  // Create new medicine object based on form input
+  // Add the new medicine to the respective medicines array
+
+  // Call the function to save medicines data to local storage
+  saveMedicinesToLocalStorage();
+
+  
+});
+
+// Function to delete medicine from local storage and update UI
+function deleteMedicineAndUpdateUI(id, medicineArray) {
+  // Delete medicine from the respective medicines array
+
+  // Call the function to save medicines data to local storage
+  saveMedicinesToLocalStorage();
+
+  
+}

@@ -7,10 +7,12 @@
 
 ul {
 	list-style: inside;
-	background: red;
+	background: #b5c0c6;
 	font-weight: bold;
 	padding-left: 1rem;
 	word-spacing: 3rem;
+	border-radius: 0.25rem;
+	
 }
 
 .main-container {
@@ -89,7 +91,7 @@ ul {
 }
 
 .pain-medicine-header, .first-aid-medicine-header, .dental-health-medicine-header {
-	height: 2.5rem;
+	height: 3.5rem;
 	display: flex;
 	background-color: #e7e7e7;
 	border: 2px solid #1b1b2a;
@@ -111,11 +113,13 @@ ul {
 	align-items: center;
 }
 
-.dental-health-medicine span {
-	flex-basis: 20%;
+.dental-health-medicine-header span {
+	flex-basis: 100%;
+	font-weight: bold;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-left: 2rem;
 }
 
 /*
@@ -129,6 +133,7 @@ ul {
 	height: 2rem;
 	margin-bottom: 0.5rem;
 	border-radius: 0.2rem;
+	background: #dfff4e;
 	background-color: darkgray;
 	
 }
