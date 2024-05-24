@@ -166,12 +166,11 @@ ul {
 	border-radius: 0.25rem;
 	border: none;
 	flex-basis: 20%;
-	background: #2f79f0;
 }
 
 .delete-button-container {
 	display: flex;
 	justify-content: end;
 	/*align-items:flex-end;*/
-	background: #ff00f2;
+
 }
