@@ -27,7 +27,6 @@ const renderFirstAidMedicinesButton = document.querySelector('.render-first-aid-
 const renderDentalHealthMedicinesButton = document.querySelector('.render-dental-health-medicine-button');
 
 // ADDING THE EVENT LISTENERS
-
 // e = event
 medicineForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -49,12 +48,9 @@ medicineForm.addEventListener('submit', (e) => {
 
 renderPainMedicinesButton.addEventListener('click', () => {
 	UI.activeTab = 'pain-medicine';
-  // UI.painMedicinesUl(painMedicines);
-  //console.log("Pain Medicines Data:", painMedicines);
   UI.renderPainMedicines(painMedicines);
   console.log(painMedicines);
   ;
-  //painMedicinesUl.style.display = 'block'; /*  HER!!!! */
 })
 
 renderFirstAidMedicinesButton.addEventListener('click', () => {
@@ -150,7 +146,6 @@ class UI {
     displayFirstAidMedicinesContainer.style.display = 'none';
     displayDentalHealthMedicinesContainer.style.display = 'none';
     displayPainMedicinesContainer.style.display = 'block';
-    //medicinesUl.textContent = '';
     if (UI.activeTab === 'pain-medicine') {
       painMedicinesUl.textContent = '';
     }
@@ -280,7 +275,7 @@ class UI {
   }
 }
 
-/* Local storage */
+/* ------- Local storage ------ */
 
 // Function to save medicines data to local storage
 function saveMedicinesToLocalStorage() {
@@ -323,7 +318,6 @@ medicineForm.addEventListener('submit', (e) => {
 
   // Create new medicine object based on form input
   // Add the new medicine to the respective medicines array
-
   // Call the function to save medicines data to local storage
   saveMedicinesToLocalStorage();
 
@@ -333,9 +327,6 @@ medicineForm.addEventListener('submit', (e) => {
 // Function to delete medicine from local storage and update UI
 function deleteMedicineAndUpdateUI(id, medicineArray) {
   // Delete medicine from the respective medicines array
-
   // Call the function to save medicines data to local storage
   saveMedicinesToLocalStorage();
-
-  
 }
