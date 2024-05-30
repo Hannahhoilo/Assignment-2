@@ -100,17 +100,21 @@ ul {
 }
 
 .pain-medicine-header span {
-	flex-basis: 20%;
+	flex-basis: 100%;
+	font-weight: bold;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-left: 2rem;
 }
 
 .first-aid-medicine-header span {
-	flex-basis: 20%;
+	flex-basis: 100%;
+	font-weight: bold;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-left: 2rem;
 }
 
 .dental-health-medicine-header span {
@@ -122,17 +126,13 @@ ul {
 	padding-left: 2rem;
 }
 
-/*
-.display-pain-medicine {
-	display: none;
-}
-*/
-
 .pain-medicine-row, .first-aid-medicine-row, .dental-health-medicine-row {
 	display: flex;
 	height: 2rem;
-	margin-bottom: 0.5rem;
+	margin: 2rem;
+	padding:2rem;
 	border-radius: 0.2rem;
+	justify-content: center;
 	background: #dfff4e;
 	background-color: darkgray;
 	
@@ -152,25 +152,29 @@ ul {
 	align-items: center;
 }
 
-.dental-health-medicine-row span {
-	flex-basis: 20%;
+.dental-health-medicine-row span{
+	flex-basis: 80%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
+	margin:3rem;
+	/* align-items: center; */
+}
+
+.delete-button-container {
+	display: flex;
+	width: 4rem;
+	justify-content: flex-end;
+	flex-basis: 20%;
+	margin-left: 35rem;
+	margin-bottom: 1rem;
 	align-items: center;
 }
 
 .delete-button {
 	height: 2rem;
+	width: 3.5rem;
 	font-weight: bold;
 	cursor: pointer;
 	border-radius: 0.25rem;
 	border: none;
-	flex-basis: 20%;
-}
-
-.delete-button-container {
-	display: flex;
-	justify-content: end;
-	/*align-items:flex-end;*/
-
 }
